@@ -21,9 +21,9 @@ end
 
 class LpSolve < Formula
   homepage "https://sourceforge.net/projects/lpsolve/"
-  url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.0_source.tar.gz"
-  version "5.5.2.0" # automatic version parser spits out "solve" as version
-  sha256 "5827a30b143105283f398a09419ea608719a2d7699ecea165a66d521803bcc9c"
+  url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.5_source.tar.gz"
+  version "5.5.2.5" # automatic version parser spits out "solve" as version
+  sha256 "201a7c62b8b3360c884ee2a73ed7667e5716fc1e809755053b398c2f5b0cf28a"
 
   bottle do
     cellar :any_skip_relocation
@@ -35,9 +35,9 @@ class LpSolve < Formula
 
   resource "lp_solve_python" do
     # 'http://lpsolve.sourceforge.net/5.5/Python.htm'
-    url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.0_Python_source.tar.gz"
-    sha256 "79683bc262e9da5b2fa7338ba190a9cd10559b9f2dbcb8f3bf07e2a81083ac51"
-    version "5.5.2.0"
+    url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.5_Python_source.tar.gz"
+    sha256 "ceb10b18bd169afaaac5f88072f406cd7539fb07cdf5de5b83f599f94159513b"
+    version "5.5.2.5"
   end
 
   # Prefer OS X's fast BLAS implementation (patch stolen from fink-project)
