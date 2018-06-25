@@ -28,8 +28,8 @@ class Fbthrift < Formula
   def install
     ENV.cxx11
   
-    cd "wangle" do
-      system "cmake", ".", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
+    cd "build" do
+      system "cmake", "..", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
       system "make"
       system "make", "install"
     end
