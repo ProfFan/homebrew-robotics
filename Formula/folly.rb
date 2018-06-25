@@ -30,9 +30,10 @@ class Folly < Formula
 
   def install
     ENV.cxx11
-
+  
+    openssl_prefix = `brew --prefix openssl`.chomp
     cd "build" do
-      system "cmake", "..", "-DOPENSSL_ROOT_DIR=#{`brew --prefix openssl`.strip}", *std_cmake_args
+      system "cmake", "..", "-DOPENSSL_ROOT_DIR=#{openssl_prefix}", *std_cmake_args
       system "make -j#{`nproc`}"
       system "make", "install"
     end
