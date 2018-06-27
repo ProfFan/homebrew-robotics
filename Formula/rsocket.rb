@@ -26,7 +26,7 @@ class Rsocket < Formula
     ENV.cxx11
 
     mkdir "build" do
-      system "cmake", "..", "-DCMAKE_BUILD_TYPE=Release", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
+      system "cmake", "..", "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_BENCHMARKS=false", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
       system "make"
       system "make", "install"
     end
