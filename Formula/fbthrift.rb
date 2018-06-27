@@ -17,7 +17,7 @@ class Fbthrift < Formula
   depends_on "snappy"
   depends_on "lz4"
   depends_on "openssl"
-  depends_on "folly"
+  depends_on "proffan/robotics/folly"
   depends_on "wangle"
   depends_on "zstd"
 
