@@ -1,4 +1,4 @@
-class Folly < Formula
+class CMFolly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
   url "https://github.com/facebook/folly/archive/v2018.06.18.00.tar.gz"
