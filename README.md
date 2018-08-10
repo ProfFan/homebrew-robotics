@@ -9,3 +9,5 @@ The missing tap for packages that I found missing in the current Homebrew reposi
 * `folly` Really Working™ Facebook Folly built with CMake
 * `rsocket` Facebook RSocket
 * `wangle` Facebook Wangle
+* `sophus` Sophus Lie Groups
+* `urjtag` The UrJTAG JTAG Utility
