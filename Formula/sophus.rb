@@ -14,7 +14,7 @@ class Sophus < Formula
 
   depends_on :macos => :el_capitan
 
-  needs :cxx11
+  # needs :cxx11
 
   def install
     ENV.cxx11

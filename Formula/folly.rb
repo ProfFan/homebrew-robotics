@@ -22,7 +22,7 @@ class Folly < Formula
   # https://github.com/facebook/folly/issues/451
   depends_on :macos => :el_capitan
 
-  needs :cxx11
+  # needs :cxx11
 
   # Known issue upstream. They're working on it:
   # https://github.com/facebook/folly/pull/445
