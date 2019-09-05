@@ -39,7 +39,7 @@ class BoostAT168 < Formula
         install
         threading=multi,single
         link=shared,static
-        cxxstd=14
+        cxxstd=17
       ]
   
       system "./bootstrap.sh", *bootstrap_args
