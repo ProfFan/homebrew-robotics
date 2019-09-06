@@ -1,4 +1,4 @@
-class BoostPython168 < Formula
+class BoostPythonAT168 < Formula
     desc "C++ library for C++/Python2 interoperability"
     homepage "https://www.boost.org/"
     url "https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2"
