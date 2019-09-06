@@ -15,7 +15,7 @@ class BoostPythonAT168 < Formula
               "--libdir=#{lib}",
               "-d2",
               "-j#{ENV.make_jobs}",
-              "--layout=tagged-1.66",
+              "--layout=tagged",
               # --no-cmake-config should be dropped if possible in next version
               "--no-cmake-config",
               "threading=multi,single",
