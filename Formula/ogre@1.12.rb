@@ -25,12 +25,11 @@ class OgreAT112 < Formula
       cmake_args = [
         "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
         "-DOGRE_BUILD_LIBS_AS_FRAMEWORKS=OFF",
-        "-DOGRE_FULL_RPATH:BOOL=FALSE",
-        "-DOGRE_BUILD_DOCS:BOOL=FALSE",
         "-DOGRE_INSTALL_DOCS:BOOL=FALSE",
         "-DOGRE_BUILD_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE",
+        "-DSDL2DIR=/usr/local/opt/sdl2"
       ]
       cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
       cmake_args.concat(std_cmake_args)
