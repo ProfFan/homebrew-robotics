@@ -16,6 +16,7 @@ class OgreAT111 < Formula
     depends_on "libzzip"
     depends_on "tbb"
     depends_on "sdl2"
+    depends_on "swig@3"
     depends_on :x11
   
     conflicts_with "ogre", :because => "Differing version of the same formula"
@@ -30,7 +31,8 @@ class OgreAT111 < Formula
         "-DOGRE_BUILD_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE",
-        "-DSDL2DIR=/usr/local/opt/sdl2"
+        "-DSDL2DIR=/usr/local/opt/sdl2",
+        "-DSWIG_EXECUTABLE=/usr/local/opt/swig@3/bin/swig"
       ]
       cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
       cmake_args.concat(std_cmake_args)
