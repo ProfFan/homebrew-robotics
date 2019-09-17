@@ -31,7 +31,8 @@ class OgreAT112 < Formula
         "-DOGRE_BUILD_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES:BOOL=FALSE",
         "-DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE",
-        "-DSDL2DIR=/usr/local/opt/sdl2"
+        "-DSDL2DIR=/usr/local/opt/sdl2",
+        "-DSWIG_DIR=/usr/local/opt/swig@3"
       ]
       cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
       cmake_args.concat(std_cmake_args)
