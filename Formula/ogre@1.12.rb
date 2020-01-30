@@ -1,7 +1,7 @@
 class OgreAT112 < Formula
     desc "Scene-oriented 3D engine written in c++"
     homepage "https://www.ogre3d.org/"
-    url "https://github.com/OGRECave/ogre/archive/v1.12.4.zip"
+    url "https://github.com/ProfFan/ogre/releases/download/v1.12.4/ogre.tar.gz"
     version "1.12.4"
     sha256 "60b6dfda8a2c47b32880237ea7dde0b0c7ecf2577b5deb49970b1937af2feaff"
     revision 2
