@@ -4,7 +4,6 @@ class OgreAT112 < Formula
     url "https://github.com/ProfFan/ogre/releases/download/v1.12.4/ogre.tar.gz"
     version "1.12.4"
     sha256 "9d263a129b2f245a7fc87a7335120cb1409e4162ab223108a2a3d9ded22d044f"
-    revision 2
 
     option "with-cg"
   
@@ -14,12 +13,12 @@ class OgreAT112 < Formula
     depends_on "freeimage"
     depends_on "freetype"
     depends_on "libzzip"
-    depends_on "tbb"
     depends_on "sdl2"
     depends_on "swig@3"
+    depends_on "tbb"
     depends_on :x11
   
-    conflicts_with "ogre", :because => "Differing version of the same formula"
+    keg_only :versioned_formula
 
     def install
       ENV.m64
