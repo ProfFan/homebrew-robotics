@@ -3,7 +3,7 @@ class OgreAT112 < Formula
     homepage "https://www.ogre3d.org/"
     url "https://github.com/ProfFan/ogre/releases/download/v1.12.4/ogre.tar.gz"
     version "1.12.4"
-    sha256 "60b6dfda8a2c47b32880237ea7dde0b0c7ecf2577b5deb49970b1937af2feaff"
+    sha256 "9d263a129b2f245a7fc87a7335120cb1409e4162ab223108a2a3d9ded22d044f"
     revision 2
 
     option "with-cg"
