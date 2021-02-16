@@ -16,7 +16,7 @@ class OgreAT112 < Formula
     depends_on "sdl2"
     depends_on "swig@3"
     depends_on "tbb"
-    depends_on :x11
+    depends_on "libx11"
   
     keg_only :versioned_formula
 

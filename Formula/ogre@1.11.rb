@@ -17,7 +17,7 @@ class OgreAT111 < Formula
     depends_on "tbb"
     depends_on "sdl2"
     depends_on "swig@3"
-    depends_on :x11
+    depends_on "libx11"
   
     conflicts_with "ogre", :because => "Differing version of the same formula"
 
