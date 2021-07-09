@@ -17,7 +17,6 @@ class Chirp < Formula
     sha256 "1eecfe4022240f2eab5af8d414f0504e072ee68377ba63d3b6fe6e66c26f66d1"
   end
 
-
   def install
     inreplace "setup.py", "darwin", "noop"
     inreplace "chirp/ui/mainapp.py", "reporting.check_for_updates(updates_callback)", "pass"

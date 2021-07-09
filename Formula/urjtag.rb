@@ -5,43 +5,40 @@ class Urjtag < Formula
   sha256 "7a2d49118f50a67e971b5bcb152ddf30a15582298d3b9b39ad7be0a54966e82e"
   head "https://git.code.sf.net/p/urjtag/git.git"
 
-  depends_on "automake" => :build
   depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "pkg-config" => :build
-  depends_on "gettext"
   depends_on "bison"
-  depends_on "readline"
+  depends_on "gettext"
+  depends_on "libftdi"
   depends_on "libtool"
   depends_on "libusb"
-  depends_on "libftdi"
+  depends_on "readline"
 
   patch :p1, :DATA
 
   def install
-    if build.head?
-      repo_path = "urjtag"
+    repo_path = if build.head?
+      "urjtag"
     else
-      repo_path = "."
+      "."
     end
     cd repo_path do
-      ENV.prepend_path "PATH", "#{Formula["libtool"].opt_bin}"
-      ENV.prepend_path "PATH", "#{Formula["gettext"].opt_bin}"
-      ENV.prepend_path "PATH", "#{Formula["bison"].opt_bin}"
-      ENV.prepend_path "PATH", "#{Formula["readline"].opt_bin}"
+      ENV.prepend_path "PATH", Formula["libtool"].opt_bin.to_s
+      ENV.prepend_path "PATH", Formula["gettext"].opt_bin.to_s
+      ENV.prepend_path "PATH", Formula["bison"].opt_bin.to_s
+      ENV.prepend_path "PATH", Formula["readline"].opt_bin.to_s
 
-      inreplace "bindings/python/setup.py.in", /\@LIBINTL\@/, "-lintl"
+      inreplace "bindings/python/setup.py.in", /@LIBINTL@/, "-lintl"
 
-      if build.head?
-        system "./autogen.sh"
-      end
-      system "./configure --prefix=#{prefix}"
+      system "./autogen.sh" if build.head?
+      system "./configure", "--prefix=#{prefix}"
       system "make"
       system "make", "install"
     end
   end
 
   test do
-    
     system "true"
   end
 end

@@ -10,13 +10,12 @@ class Rsocket < Formula
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "libevent"
-  depends_on "xz"
-  depends_on "snappy"
   depends_on "lz4"
+  depends_on macos: :el_capitan
   depends_on "openssl"
   depends_on "proffan/robotics/folly"
-
-  depends_on :macos => :el_capitan
+  depends_on "snappy"
+  depends_on "xz"
 
   # needs :cxx11
 
@@ -26,7 +25,8 @@ class Rsocket < Formula
     ENV.cxx11
 
     mkdir "build" do
-      system "cmake", "..", "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_BENCHMARKS=false", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
+      system "cmake", "..", "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_BENCHMARKS=false",
+"-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
       system "make"
       system "make", "install"
     end

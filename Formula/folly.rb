@@ -5,22 +5,22 @@ class Folly < Formula
   sha256 "aa4aa8f4ef18a3bddf06a7ed9349f172b2bbad11cbc0606cdc91517ffe7ee809"
   head "https://github.com/facebook/folly.git"
 
-  depends_on "cmake" => :build
   depends_on "automake" => :build
+  depends_on "cmake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "double-conversion"
-  depends_on "glog"
-  depends_on "gflags"
   depends_on "boost"
+  depends_on "double-conversion"
+  depends_on "gflags"
+  depends_on "glog"
   depends_on "libevent"
-  depends_on "xz"
-  depends_on "snappy"
   depends_on "lz4"
+  depends_on macos: :el_capitan
   depends_on "openssl"
+  depends_on "snappy"
+  depends_on "xz"
 
   # https://github.com/facebook/folly/issues/451
-  depends_on :macos => :el_capitan
 
   # needs :cxx11
 
@@ -30,7 +30,7 @@ class Folly < Formula
 
   def install
     ENV.cxx11
-  
+
     cd "build" do
       system "cmake", "..", "-DOPENSSL_ROOT_DIR=#{Formula["openssl"].opt_prefix}", *std_cmake_args
       system "make"

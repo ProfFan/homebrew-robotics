@@ -13,11 +13,10 @@ class Boost < Formula
   end
 
   bottle do
-    cellar :any
     rebuild 1
-    sha256 "21b7a8b746e98a39c299b5db595f97ff24cb498fee5c3c38be690bcc2510137b" => :catalina
-    sha256 "72159a6229ced562aa26100ce1c72f2ec3070cd6fe6e894e912abd9acc1b76bb" => :mojave
-    sha256 "f7e7f920d91f6b47a99f342a1414b992f012c49441e62b5587502d53cb31af7b" => :high_sierra
+    sha256 cellar: :any, catalina:    "21b7a8b746e98a39c299b5db595f97ff24cb498fee5c3c38be690bcc2510137b"
+    sha256 cellar: :any, mojave:      "72159a6229ced562aa26100ce1c72f2ec3070cd6fe6e894e912abd9acc1b76bb"
+    sha256 cellar: :any, high_sierra: "f7e7f920d91f6b47a99f342a1414b992f012c49441e62b5587502d53cb31af7b"
   end
 
   depends_on "icu4c"
